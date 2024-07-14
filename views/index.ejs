@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who's your pokemon?</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/edit-undo-brk" rel="stylesheet">
+                
+                                                
+  </head>
+  <body>
+    <div class="hero">
+        <div class="form-container">           
+        <!-- <video autoplay muted loop id="myVideo">
+            <source src="/images/videoplayback.mp4" type="video/mp4">
+            </video>-->
+        <div>
+            <header class="header-h1">
+            <h1>Who's your pokemon?</h1>
+        </header>
+        </div>
+        <div>
+      <form id="myForm" method="post">
+        <div><label for="name">
+          <input
+          class="userInput"
+            type="text"
+            name="username"
+            placeholder="enter your name"
+            required />
+        </label>
+    </div>
+        <!-- normal: '#A8A77A', 
+	fire: '#EE8130',
+	water: '#6390F0',
+	electric: '#F7D02C',
+	grass: '#7AC74C',
+	ice: '#96D9D6',
+	fighting: '#C22E28',
+	poison: '#A33EA1',
+	ground: '#E2BF65',
+	flying: '#A98FF3',
+	psychic: '#F95587',
+	bug: '#A6B91A',
+	rock: '#B6A136',
+	ghost: '#735797',
+	dragon: '#6F35FC',
+	dark: '#705746',
+	steel: '#B7B7CE',
+	fairy: '#D685AD', --> 
+    <div><label for="submit"><h3>Select a type:</h3> </label></div>
+    <div class="button-container">
+        
+        <input
+          id="normal"
+          type="submit"
+          value="NORMAL"
+          formaction="/get/normal" />
+        <input id="fire" type="submit" value="FIRE" formaction="/get/fire" />
+        <input id="water" type="submit" value="WATER" formaction="/get/water" />
+        <input
+          id="electric"
+          type="submit"
+          value="ELECTRIC"
+          formaction="/get/electric" />
+        <input id="grass" type="submit" value="GRASS" formaction="/get/grass" />
+        <input id="ice" type="submit" value="ICE" formaction="/get/ice" />
+        <input
+          id="fighting"
+          type="submit"
+          value="FIGHTING"
+          formaction="/get/fighting" />
+        <input
+          id="poison"
+          type="submit"
+          value="POISON"
+          formaction="/get/poison" />
+        <input
+          id="ground"
+          type="submit"
+          value="GROUND"
+          formaction="/get/ground" />
+        <input
+          id="flying"
+          type="submit"
+          value="FLYING"
+          formaction="/get/flying" />
+        <input
+          id="psychic"
+          type="submit"
+          value="PSYCHIC"
+          formaction="/get/psychic" />
+        <input id="bug" type="submit" value="BUG" formaction="/get/bug" />
+        <input id="rock" type="submit" value="ROCK" formaction="/get/rock" />
+        <input id="ghost" type="submit" value="GHOST" formaction="/get/ghost" />
+        <input
+          id="dragon"
+          type="submit"
+          value="DRAGON"
+          formaction="/get/dragon" />
+        <input id="dark" type="submit" value="DARK" formaction="/get/dark" />
+        <input id="steel" type="submit" value="STEEL" formaction="/get/steel" />
+        <input id="fairy" type="submit" value="FAIRY" formaction="/get/fairy" />
+    </div>
+      </form>
+    </div>
+    
+</div>
+    <div class="result-container">
+      <% if(locals.name) { %>
+        <script>
+            document.querySelector(".form-container").classList.toggle("is-hidden");
+            document.querySelector(".hero").classList.toggle("changeBg");
+        </script>
+      <h1><%= user %> just got <%= name %>!</h1>
+      <section id="name"><h2>#<%= id %> <%= name %></h2></section>
+      <section id="image">
+        <img src="<%= image %>" alt="pic of <%= name %>" />
+      </section>
+      <div class="inner-result">
+        <div><section id="type">
+        Types:
+        <ul>
+          <% types.forEach((type)=> { %>
+          <li id=<%=type.type.name %>> <%= type.type.name %></li>
+          <% }) %>
+        </ul>
+      </section></div>
+      <div><section id="stats">
+        <div>Height:<%= height/10 %>m</div>
+        <div>Weight:<%= weight/10 %>kg</div>
+      </section></div>
+      <div><section id="abilities">
+        Abilities:
+        <ul>
+          <% abilities.forEach((ability)=> { %>
+          <li><%= ability.ability.name %></li>
+          <% }) %>
+        </ul>
+      </section></div>
+      
+    </div>
+      <% } %>
+      </div>
+    </div>
+  </body>
+</html>
