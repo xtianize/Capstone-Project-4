@@ -1,4 +1,4 @@
-This website will give a random pokemon based on you the type you have selected.
+This website will give a random pokemon based on the type you have selected.
 It uses API requests from pokeapi.co.
 
 ![cp4 screenshot1](https://github.com/user-attachments/assets/0467f514-7a95-4907-a47d-fcb259aa2cda)
